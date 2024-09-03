@@ -1,0 +1,248 @@
+@font-face {
+    font-family:'Rubik';
+    src: url('./fonts/Rubik-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:'Rubik';
+    src: url('./fonts/Rubik-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+:root{
+    --Soft-Blue: hsl(231, 69%, 60%);
+    --Soft-Red: hsl(0, 94%, 66%);
+    --Grayish-Blue: hsl(229, 8%, 60%);
+    --Very-Dark-Blue: hsl(229, 31%, 21%);
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Rubik';
+    font-weight: 100;
+    font-size: 1.8rem;
+    min-height: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    width: 100%;
+    height: 100px;
+    padding: 24px 28px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo{
+    display: flex;
+    flex-direction: row;
+}
+
+.header__img{
+   width:28px;
+   height: 28px;
+   background-color: var(--Soft-Blue);
+   color: #fff;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 1rem;
+}
+
+.header__logoname{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    margin-left: 12px;
+    user-select: none;
+}
+
+.header__imgclose{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.header__imgbar:hover{
+    cursor: pointer;
+}
+
+/* Menu modal */
+.header__menu *{
+    color: #fff;
+}
+
+.header__menu{
+    position: absolute;
+    z-index: 1;
+    bottom: calc( 100% - 24px);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--Very-Dark-Blue);
+    opacity: 0;
+    padding: 24px 28px;
+    transition: all 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.headermenu__head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 52px;
+    flex-grow: 2;
+}   
+
+.header__nav{
+    flex-grow: 12;
+}
+
+.header__sociales{
+    flex-grow: 1;
+    align-self: center;
+    align-content: center;
+    display: flex;
+    column-gap: 40px;
+  
+}
+
+.header__sociales i{
+    width: 24px;
+    height: 24px;
+    font-size: 2.4rem;
+}
+
+.header__list{
+    list-style: none;
+    display: flex;   
+    flex-direction: column;
+}
+
+.header__list li{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.8rem;
+    height: 60px;
+    border-bottom: 1px solid var(--Grayish-Blue);
+    align-self: center;
+    align-content: center;
+    width: 100%;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+.header__list li:first-child{
+    border-top: 1px solid var(--Grayish-Blue); 
+}
+
+.header__login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    height: 46px;
+    margin-top: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.header__close i{
+    font-size: 1.8rem;
+    
+}
+.header__close:hover{
+    cursor: pointer;
+}
+
+.header__img--mobil{
+    background-color: #fff;
+}
+
+.header__img--mobil>i{
+    color: var(--Very-Dark-Blue);
+}
+
+.show-menu{
+    opacity: 1;
+    bottom:0;
+}
+
+@media screen and (min-width:769px){ 
+    .header{
+        padding:50px 150px;
+    }
+    .header__imgbar{
+        display: none;
+    }
+
+    .header__menu{
+        opacity: 1;
+        bottom:0;
+        position: static;
+        padding: 0;
+        height: auto;
+        width: 470px;
+        background-color: transparent;
+    }
+
+    .header__nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    .header__list{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 310px;
+    }
+ 
+    .header__list li{
+        border: none;
+        color: var(--Grayish-Blue);
+        font-size: 1.2rem;
+        width: 70px;
+    }
+    
+    .header__login{
+        margin-top: 0;
+        background-color: var(--Soft-Red);
+        width: 110px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .header__list li:first-child{
+        border:none; 
+    }
+
+    .headermenu__head{
+        display: none;
+    }
+    .header__sociales{
+        display: none;
+    }
+
+}
