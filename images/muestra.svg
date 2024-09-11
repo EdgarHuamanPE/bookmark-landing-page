@@ -12,7 +12,7 @@
                 <feMergeNode in="SourceGraphic" />
             </feMerge>
         </filter>
-        <rect id="c" width="578" height="385" rx="26" />
+        <rect id="c" width="657" height="456" rx="26" />
         <filter id="b" width="126%" height="139%" x="-13%" y="-11.7%"
             filterUnits="objectBoundingBox">
             <feOffset dy="30" in="SourceAlpha" result="shadowOffsetOuter1" />
@@ -24,18 +24,18 @@
             <stop offset="0%" stop-color="#151515" />
             <stop offset="100%" stop-color="#3D3D3D" />
         </linearGradient>
-        <rect id="e" width="536" height="346" y="3" rx="8" />
+        <rect id="e" width="615" height="415" y="3" rx="8" />
     </defs>
-    <g fill="none" fill-rule="evenodd" filter="url(#a)" transform="translate(39 9)">
+    <g fill="none" fill-rule="evenodd" filter="url(#a)" transform="translate(0 0)">
         <g transform="translate(.5 .5)">
             <g fill-rule="nonzero">
                 <use fill="#000" filter="url(#b)" xlink:href="#c" />
                 <use fill="#777" xlink:href="#c" />
             </g>
-            <rect width="574.23" height="381.865" x="2" y="2" fill="url(#d)" fill-rule="nonzero"
+            <rect width="657" height="456" x="2" y="2" fill="url(#d)" fill-rule="nonzero"
                 rx="25" />
             <g transform="translate(21.03 16.303)">
-                <rect width="471.463" height="353.756" x="33" fill="#2A2A2A" fill-rule="nonzero"
+                <rect width="554" height="343" x="33" fill="#2A2A2A" fill-rule="nonzero"
                     opacity=".1" rx="5" />
                 <mask id="f" fill="#fff">
                     <use xlink:href="#e" />
